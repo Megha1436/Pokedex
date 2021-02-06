@@ -1,15 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Dashboard from './pages/Dashboard';
-import {BrowserRouter} from 'react-router-dom';
-import Mainroute from './router/route';
+import { HashRouter } from 'react-router-dom';
+import Mainroute from './router/Mainroute';
 function App() {
-  return (
-    <BrowserRouter>
-    <Mainroute/>
-    </BrowserRouter>
-  );
+	return (
+		<HashRouter basename={process.env.PUBLIC_URL}>
+			<Mainroute />
+		</HashRouter>
+	);
 }
 
 export default App;
